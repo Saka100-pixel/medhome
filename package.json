@@ -1,0 +1,12 @@
+{
+  "name": "medhome",
+  "version": "1.0.0",
+  "description": "MedHome — Verified Home Healthcare in Zambia",
+  "scripts": {
+    "dev": "node serve.js",
+    "start": "node serve.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

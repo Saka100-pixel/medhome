@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedHome for Professionals — Earn More. Work Flexibly. Get Verified.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--teal:#1A5C5C;--teal-mid:#226B6B;--teal-light:#2E8B8B;--teal-pale:#E6F4F4;--teal-dark:#0F3838;--cream:#FBF8F3;--warm-white:#F6F2EC;--gold:#C9943A;--gold-light:#F0E0C0;--text:#1C2B2B;--text-mid:#3D5252;--text-muted:#6B8080;--border:rgba(28,43,43,0.1);--bl:rgba(255,255,255,0.15)}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:var(--teal-light);border-radius:2px}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:74px;background:rgba(15,56,56,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--bl)}
+.nl{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nn{font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:600;color:#fff;letter-spacing:0.02em}
+.nn span{color:var(--gold)}
+.nl2{display:flex;gap:36px;align-items:center}
+.nl2 a{font-size:12px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.2s}
+.nl2 a:hover{color:#fff}
+.nfam{color:rgba(201,148,58,0.75)!important}
+.ncta{background:var(--gold)!important;color:var(--teal-dark)!important;padding:11px 24px;border-radius:50px;font-weight:600!important}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:74px;overflow:hidden}
+.hero-left{background:var(--teal-dark);display:flex;flex-direction:column;justify-content:center;padding:80px 64px 80px 72px;position:relative;overflow:hidden}
+.hero-bg-img{position:absolute;inset:0;background-image:url('nurses-together-1.jpeg');background-size:cover;background-position:center top;opacity:0.15}
+.hero-bg-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,56,56,0.94) 0%,rgba(15,56,56,0.78) 100%)}
+.hc{position:relative;z-index:2}
+.hbadge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,148,58,0.12);border:1px solid rgba(201,148,58,0.35);border-radius:50px;padding:7px 18px;margin-bottom:28px;width:fit-content}
+.hbdot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.hbadge span{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold)}
+h1{font-family:'Playfair Display',serif;font-size:clamp(40px,5vw,68px);font-weight:700;line-height:1.06;letter-spacing:-0.022em;color:#fff;margin-bottom:22px}
+h1 em{font-style:italic;color:var(--gold)}
+.hsub{font-size:16px;font-weight:300;color:rgba(255,255,255,0.65);max-width:420px;line-height:1.85;margin-bottom:44px}
+.hbtns{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:52px}
+.btn-gold-pill{display:inline-block;background:var(--gold);color:var(--teal-dark);padding:16px 36px;border-radius:50px;font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:opacity 0.2s,transform 0.15s}
+.btn-gold-pill:hover{opacity:0.9;transform:translateY(-1px)}
+.btn-ghost-pill{color:rgba(255,255,255,0.65);font-size:13px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.2);transition:color 0.2s,border-color 0.2s;display:inline-flex;align-items:center;gap:8px}
+.btn-ghost-pill:hover{color:#fff;border-color:rgba(255,255,255,0.5)}
+.btn-ghost-pill::after{content:'→'}
+.earn-strip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;overflow:hidden}
+.es{padding:20px 22px;border-right:1px solid rgba(255,255,255,0.08)}
+.es:last-child{border-right:none}
+.en{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--gold);line-height:1}
+.el{font-size:10px;color:rgba(255,255,255,0.4);margin-top:4px;letter-spacing:0.08em}
+
+/* HERO RIGHT */
+.hero-right{position:relative;overflow:hidden}
+.hero-right img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.hero-right-ov{position:absolute;inset:0;background:linear-gradient(to right,rgba(15,56,56,0.45) 0%,transparent 35%),linear-gradient(to top,rgba(15,56,56,0.75) 0%,transparent 50%)}
+.join-card{position:absolute;bottom:36px;left:36px;right:36px;background:rgba(255,255,255,0.1);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.18);border-radius:16px;padding:26px 28px}
+.jc-title{font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:18px}
+.jc-steps{display:flex;flex-direction:column;gap:12px;margin-bottom:20px}
+.jcs{display:flex;align-items:flex-start;gap:12px}
+.jcs-n{width:24px;height:24px;border-radius:50%;background:rgba(201,148,58,0.2);border:1px solid rgba(201,148,58,0.4);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--gold);flex-shrink:0}
+.jcs-text{font-size:12px;color:rgba(255,255,255,0.7);line-height:1.5}
+.jcs-text strong{color:#fff;font-weight:600;display:block;margin-bottom:2px}
+.jc-btn{display:block;width:100%;padding:13px;background:var(--gold);color:var(--teal-dark);font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-align:center;border:none;cursor:pointer;border-radius:50px;text-decoration:none;transition:opacity 0.2s}
+.jc-btn:hover{opacity:0.9}
+
+/* STRIP */
+.dstrip{background:var(--teal-mid);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);padding:16px 80px;display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap}
+.di{font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.55)}
+.dd{color:var(--gold);opacity:0.4;font-size:16px}
+
+section{padding:100px 80px}
+.ey{display:flex;align-items:center;gap:12px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal-light);margin-bottom:18px}
+.ey::before{content:'';display:block;width:24px;height:2px;background:var(--teal-light);border-radius:2px}
+h2.t{font-family:'Playfair Display',serif;font-size:clamp(34px,3.5vw,54px);font-weight:700;line-height:1.1;letter-spacing:-0.02em;max-width:640px;margin-bottom:20px;color:var(--text)}
+h2.t em{font-style:italic;color:var(--teal-light)}
+.b{font-size:16px;font-weight:300;color:var(--text-muted);max-width:500px;line-height:1.85}
+
+/* WHO CAN JOIN */
+.who{background:var(--warm-white)}
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:64px}
+.wc{background:var(--cream);padding:36px 30px;border-radius:14px;border:1px solid var(--border);transition:transform 0.2s,box-shadow 0.2s}
+.wc:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(26,92,92,0.1)}
+.wc.prem{background:var(--teal-dark)}
+.wc.prem:hover{box-shadow:0 20px 48px rgba(15,56,56,0.3)}
+.wi{width:50px;height:50px;border-radius:14px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:22px}
+.wc.prem .wi{background:rgba(255,255,255,0.08)}
+.wc h3{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;margin-bottom:8px;color:var(--text)}
+.wc.prem h3{color:#fff}
+.wc p{font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.8;margin-bottom:12px}
+.wc.prem p{color:rgba(255,255,255,0.6)}
+.wauth{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal-light)}
+.wrate{font-size:12px;color:var(--text-muted);margin-top:5px}
+.wc.prem .wrate{color:rgba(201,148,58,0.6)}
+.ptag{display:inline-block;background:var(--gold);color:var(--teal-dark);font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:50px;margin-bottom:14px}
+
+/* BENEFITS */
+.benefits{background:var(--teal-dark)}
+.benefits h2.t{color:#fff}
+.benefits h2.t em{color:var(--gold)}
+.benefits .b{color:rgba(255,255,255,0.5)}
+.bgrid{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:64px;align-items:start}
+.blist{display:flex;flex-direction:column;gap:10px}
+.ben{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:26px 28px;border-radius:12px;transition:background 0.2s}
+.ben:hover{background:rgba(255,255,255,0.07)}
+.ben-top{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+.ben-ic{width:38px;height:38px;border-radius:10px;background:rgba(201,148,58,0.12);border:1px solid rgba(201,148,58,0.2);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.ben h4{font-size:15px;font-weight:600;color:#fff}
+.ben p{font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.75}
+.earn-panel{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:36px}
+.ep-t{font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:24px}
+.ee{margin-bottom:28px}
+.ee-lbl{font-size:12px;color:rgba(255,255,255,0.45);margin-bottom:14px}
+.er{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:13px}
+.er span:first-child{color:rgba(255,255,255,0.5)}
+.er span:last-child{color:#fff;font-weight:600}
+.er.total span:first-child{color:#fff;font-weight:600}
+.er.total span:last-child{color:var(--gold);font-size:20px;font-family:'Playfair Display',serif;font-weight:700}
+.msums{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}
+.ms{background:rgba(255,255,255,0.05);padding:18px;text-align:center;border-radius:10px}
+.ms-n{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--gold);line-height:1}
+.ms-l{font-size:10px;color:rgba(255,255,255,0.35);margin-top:4px}
+.ep-note{font-size:11px;color:rgba(255,255,255,0.2);line-height:1.6;margin-top:18px}
+
+/* REAL NURSES SECTION */
+.nurses{background:var(--teal-dark);padding:0;overflow:hidden}
+.nurses-inner{display:grid;grid-template-columns:1fr 1fr 1fr 1fr}
+.np{position:relative;overflow:hidden;aspect-ratio:3/4}
+.np img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 0.5s}
+.np:hover img{transform:scale(1.04)}
+.np-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,56,56,0.88) 0%,transparent 50%)}
+.np-text{position:absolute;bottom:0;left:0;right:0;padding:24px 20px}
+.np-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:2px}
+.np-role{font-size:10px;color:rgba(255,255,255,0.55)}
+
+/* JOIN STEPS */
+.join{background:var(--warm-white)}
+.jgrid{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:64px;align-items:start}
+.jsteps{display:flex;flex-direction:column}
+.js{display:grid;grid-template-columns:56px 1fr;padding:28px 0;border-bottom:1px solid var(--border)}
+.js:first-child{border-top:1px solid var(--border)}
+.jsn{font-family:'Playfair Display',serif;font-size:13px;color:var(--text-muted);opacity:0.4;padding-top:3px}
+.js h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:8px;color:var(--text)}
+.js p{font-size:14px;font-weight:300;color:var(--text-muted);line-height:1.8}
+.req-panel{background:var(--teal-dark);border-radius:16px;padding:36px}
+.rp-t{font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:22px}
+.rlist{display:flex;flex-direction:column}
+.ri{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.07)}
+.ri:last-child{border-bottom:none}
+.ri-ch{width:20px;height:20px;border-radius:50%;background:rgba(201,148,58,0.15);border:1px solid rgba(201,148,58,0.3);display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--gold);flex-shrink:0;margin-top:1px}
+.ri h4{font-size:13px;font-weight:600;color:#fff;margin-bottom:2px}
+.ri p{font-size:12px;color:rgba(255,255,255,0.45);line-height:1.5}
+.founding{background:rgba(201,148,58,0.1);border:1px solid rgba(201,148,58,0.3);border-radius:12px;padding:20px 22px;margin-top:22px}
+.fn-tag{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.fn-text{font-size:13px;color:rgba(255,255,255,0.65);line-height:1.6}
+
+/* TESTI */
+.testi{background:var(--cream)}
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:64px}
+.tc{background:var(--warm-white);padding:34px 28px;border-radius:14px;border:1px solid var(--border);position:relative;transition:transform 0.2s,box-shadow 0.2s}
+.tc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),rgba(201,148,58,0.2));border-radius:14px 14px 0 0}
+.tc:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(26,92,92,0.1)}
+.tqm{font-family:'Playfair Display',serif;font-size:44px;color:var(--teal-light);opacity:0.3;line-height:1;margin-bottom:12px}
+.tt{font-size:14px;font-weight:300;color:var(--text);line-height:1.85;margin-bottom:22px}
+.ta{display:flex;align-items:center;gap:12px}
+.tav{width:38px;height:38px;border-radius:50%;background:var(--teal-dark);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0}
+.tn{font-size:14px;font-weight:600;color:var(--text)}
+.tro{font-size:11px;color:var(--text-muted)}
+
+/* PRICING */
+.pricing{background:var(--warm-white)}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:64px}
+.pc{background:var(--cream);border:1px solid var(--border);padding:40px 34px;border-radius:16px;transition:transform 0.2s,box-shadow 0.2s}
+.pc:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(26,92,92,0.1)}
+.pc.pf{background:var(--teal-dark);border-color:var(--teal-dark)}
+.ptg{font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:22px;display:block}
+.pc.pf .ptg{color:rgba(255,255,255,0.4)}
+.pam{font-family:'Playfair Display',serif;font-size:50px;font-weight:700;line-height:1;margin-bottom:4px;color:var(--text)}
+.pc.pf .pam{color:var(--gold)}
+.ppd{font-size:12px;color:var(--text-muted);margin-bottom:28px}
+.pc.pf .ppd{color:rgba(255,255,255,0.35)}
+.pfl{list-style:none;display:flex;flex-direction:column;gap:13px;margin-bottom:36px}
+.pfl li{font-size:13px;font-weight:300;color:var(--text);display:flex;align-items:center;gap:10px}
+.pc.pf .pfl li{color:rgba(255,255,255,0.7)}
+.pfl li::before{content:'';display:block;width:14px;height:2px;background:var(--teal-light);flex-shrink:0;border-radius:2px}
+.pc.pf .pfl li::before{background:var(--gold)}
+.pct{display:block;text-align:center;padding:14px;border:2px solid var(--teal-light);color:var(--teal-light);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:50px;transition:all 0.2s;font-family:'Plus Jakarta Sans',sans-serif}
+.pct:hover{background:var(--teal-light);color:#fff}
+.pc.pf .pct{background:var(--gold);color:var(--teal-dark);border-color:var(--gold)}
+.pc.pf .pct:hover{opacity:0.9}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,var(--gold) 0%,#A87030 100%);padding:100px 80px;text-align:center;position:relative;overflow:hidden}
+.cta h2{font-family:'Playfair Display',serif;font-size:clamp(36px,4.5vw,62px);font-weight:700;line-height:1.1;letter-spacing:-0.02em;color:var(--teal-dark);margin-bottom:18px}
+.cta h2 em{font-style:italic}
+.cta p{font-size:17px;font-weight:300;color:rgba(15,56,56,0.7);max-width:520px;margin:0 auto 44px;line-height:1.85}
+.cta-bs{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-dark{background:var(--teal-dark);color:#fff;padding:17px 44px;border-radius:50px;font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:opacity 0.2s,transform 0.15s;display:inline-block}
+.btn-dark:hover{opacity:0.9;transform:translateY(-1px)}
+.btn-outline-dark{border:2px solid rgba(15,56,56,0.3);color:var(--teal-dark);padding:17px 44px;border-radius:50px;font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:background 0.2s;display:inline-block}
+.btn-outline-dark:hover{background:rgba(15,56,56,0.07)}
+
+footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80px 40px}
+.ft{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.07);margin-bottom:32px}
+.fbl{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.fbn{font-size:18px;font-weight:600;color:#fff;letter-spacing:0.02em}
+.fbn span{color:var(--gold)}
+.fb p{font-size:13px;line-height:1.8;max-width:240px}
+.fc h4{font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:18px}
+.fc a{display:block;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:12px;transition:color 0.2s}
+.fc a:hover{color:#fff}
+.fb2{display:flex;justify-content:space-between;align-items:center;font-size:12px}
+.fb2 span{opacity:0.3}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hc>*{animation:fadeUp 0.8s ease both}
+.hbadge{animation-delay:0.1s}h1{animation-delay:0.22s}.hsub{animation-delay:0.35s}.hbtns{animation-delay:0.46s}.earn-strip{animation-delay:0.56s}
+
+@media(max-width:1024px){nav{padding:0 32px}section{padding:80px 40px}.hero{grid-template-columns:1fr}.hero-left{padding:60px 40px}.hero-right{height:420px}.bgrid,.jgrid{grid-template-columns:1fr;gap:48px}.who-grid,.tg,.pgrid{grid-template-columns:1fr 1fr}.ft{grid-template-columns:1fr 1fr}.nurses-inner{grid-template-columns:1fr 1fr}.dstrip{padding:16px 32px}}
+@media(max-width:640px){nav{padding:0 20px}.nl2{gap:14px}.hero-left{padding:40px 24px}section{padding:64px 24px}.who-grid,.tg,.pgrid{grid-template-columns:1fr}.ft{grid-template-columns:1fr;gap:32px}.cta{padding:72px 24px}footer{padding:48px 24px 32px}.nurses-inner{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nl" href="index.html">
+    <svg width="30" height="30" viewBox="0 0 34 34" fill="none">
+      <path d="M9.5 3C6.46 3 4 5.46 4 8.5S6.46 14 9.5 14 15 11.54 15 8.5 12.54 3 9.5 3Z" fill="#C9943A"/>
+      <path d="M24.5 3C21.46 3 19 5.46 19 8.5S21.46 14 24.5 14 30 11.54 30 8.5 27.54 3 24.5 3Z" fill="white" opacity="0.55"/>
+      <path d="M9.5 18C6.46 18 4 20.46 4 23.5S6.46 29 9.5 29 15 26.54 15 23.5 12.54 18 9.5 18Z" fill="white" opacity="0.3"/>
+      <path d="M24.5 18C21.46 18 19 20.46 19 23.5S21.46 29 24.5 29 30 26.54 30 23.5 27.54 18 24.5 18Z" fill="#C9943A" opacity="0.5"/>
+    </svg>
+    <span class="nn">Med<span>Home</span></span>
+  </a>
+  <div class="nl2">
+    <a href="index.html" class="nfam">For Families</a>
+    <a href="#who">Disciplines</a>
+    <a href="#join">How to join</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#apply" class="ncta">Apply Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-bg-img"></div>
+    <div class="hero-bg-ov"></div>
+    <div class="hc">
+      <div class="hbadge"><div class="hbdot"></div><span>For Healthcare Professionals · Lusaka</span></div>
+      <h1>Your license<br>is your <em>greatest</em><br>asset. Use it.</h1>
+      <p class="hsub">Join MedHome and connect with Lusaka families who need your expertise — on your schedule, at your rate, verified by NMCZ or HPCZ.</p>
+      <div class="hbtns">
+        <a href="#apply" class="btn-gold-pill">Apply to Join MedHome</a>
+        <a href="#join" class="btn-ghost-pill">See how it works</a>
+      </div>
+      <div class="earn-strip">
+        <div class="es"><div class="en">K800</div><div class="el">Avg. nurse shift</div></div>
+        <div class="es"><div class="en">K1,800</div><div class="el">Avg. doctor visit</div></div>
+        <div class="es"><div class="en">K0</div><div class="el">To join · 6 months free</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="images/nurses-together-2.jpeg" alt="MedHome verified nurses">
+    <div class="hero-right-ov"></div>
+    <div class="join-card">
+      <div class="jc-title">How joining works — 4 steps</div>
+      <div class="jc-steps">
+        <div class="jcs"><div class="jcs-n">1</div><div class="jcs-text"><strong>Apply with your license</strong>Submit your NMCZ or HPCZ certificate and NRC. Takes 10 minutes.</div></div>
+        <div class="jcs"><div class="jcs-n">2</div><div class="jcs-text"><strong>We verify with the council</strong>We cross-check your license directly. You get a verified badge on your profile.</div></div>
+        <div class="jcs"><div class="jcs-n">3</div><div class="jcs-text"><strong>Set your rate and availability</strong>You decide what you charge and when you are available.</div></div>
+        <div class="jcs"><div class="jcs-n">4</div><div class="jcs-text"><strong>Accept bookings and get paid</strong>Payment hits your mobile money when the shift is done.</div></div>
+      </div>
+      <a href="#apply" class="jc-btn">Start your application →</a>
+    </div>
+  </div>
+</div>
+
+<div class="dstrip">
+  <div class="di">Registered Nurses</div><div class="dd">·</div>
+  <div class="di">Doctors &amp; GPs</div><div class="dd">·</div>
+  <div class="di">Physiotherapists</div><div class="dd">·</div>
+  <div class="di">Midwives</div><div class="dd">·</div>
+  <div class="di">Mental Health Counsellors</div><div class="dd">·</div>
+  <div class="di">Certified Caregivers</div>
+</div>
+
+<!-- WHO CAN JOIN -->
+<section class="who" id="who">
+  <div class="ey">Who can join</div>
+  <h2 class="t">Six disciplines.<br>All <em>welcome.</em></h2>
+  <p class="b">If you are licensed with NMCZ or HPCZ and want to earn from your skills outside hospital hours, MedHome is built for you.</p>
+  <div class="who-grid">
+    <div class="wc"><div class="wi">🩺</div><h3>Registered Nurses</h3><p>Take shifts around your hospital schedule. Post-surgery, wound care, medication, palliative care at home.</p><div class="wauth">NMCZ License Required</div><div class="wrate">Earn K600–K900 per 12-hour shift</div></div>
+    <div class="wc"><div class="wi">👶</div><h3>Midwives</h3><p>Postnatal home visits, newborn checks, and breastfeeding support. New mothers in Lusaka need you.</p><div class="wauth">NMCZ License Required</div><div class="wrate">Set your own session rate</div></div>
+    <div class="wc prem"><div class="ptag">Premium Tier</div><div class="wi">👨‍⚕️</div><h3>Doctors &amp; GPs</h3><p>Home consultations, post-discharge check-ups, chronic disease monitoring, and prescriptions. The highest-earning discipline.</p><div class="wauth" style="color:var(--gold)">HPCZ Registration Required</div><div class="wrate">Earn K1,200–K2,500 per consultation</div></div>
+    <div class="wc"><div class="wi">🦽</div><h3>Physiotherapists</h3><p>Stroke rehabilitation, mobility recovery, and orthopaedic follow-up. Families need you at home, not just a clinic.</p><div class="wauth">HPCZ License Required</div><div class="wrate">Earn K500–K800 per session</div></div>
+    <div class="wc"><div class="wi">🧠</div><h3>Mental Health Counsellors</h3><p>Home-based counselling for patients and caregivers. Massive unmet demand in Lusaka.</p><div class="wauth">HPCZ License Required</div><div class="wrate">Set your own session rate</div></div>
+    <div class="wc"><div class="wi">🤲</div><h3>Certified Caregivers</h3><p>Daily living assistance, elderly care, and companionship. Formal training or MedHome certification required.</p><div class="wauth">MedHome Certification</div><div class="wrate">Earn K300–K500 per 8-hour shift</div></div>
+  </div>
+</section>
+
+<!-- BENEFITS + EARNINGS -->
+<section class="benefits">
+  <div class="ey">Why MedHome</div>
+  <div class="bgrid">
+    <div>
+      <h2 class="t" style="color:#fff">Everything a <em style="color:var(--gold)">professional</em><br>actually needs.</h2>
+      <p class="b" style="margin-bottom:44px">MedHome handles matching, scheduling, payment, and reputation — so you can focus on the care.</p>
+      <div class="blist">
+        <div class="ben"><div class="ben-top"><div class="ben-ic">💰</div><h4>You set your own rate</h4></div><p>No one tells you what to charge. You set your rate and families see it upfront before booking.</p></div>
+        <div class="ben"><div class="ben-top"><div class="ben-ic">📅</div><h4>You control your schedule</h4></div><p>Set availability day by day. Accept only shifts that fit around your existing commitments.</p></div>
+        <div class="ben"><div class="ben-top"><div class="ben-ic">📱</div><h4>Payment to your mobile money</h4></div><p>Funds release automatically to MTN or Airtel when a shift is completed. No chasing families.</p></div>
+        <div class="ben"><div class="ben-top"><div class="ben-ic">⭐</div><h4>Build your reputation</h4></div><p>Every shift adds a review. Strong ratings make you one of the first professionals families see.</p></div>
+        <div class="ben"><div class="ben-top"><div class="ben-ic">🏅</div><h4>Verified badge on your profile</h4></div><p>Your NMCZ or HPCZ badge is visible to every family — the most important trust signal on the platform.</p></div>
+      </div>
+    </div>
+    <div class="earn-panel">
+      <div class="ep-t">Earnings example — Registered Nurse</div>
+      <div class="ee">
+        <div class="ee-lbl">One 12-hour shift at K800</div>
+        <div class="er"><span>Shift fee charged to family</span><span>K800</span></div>
+        <div class="er"><span>MedHome platform fee (20%)</span><span>K160</span></div>
+        <div class="er total"><span>You receive</span><span>K640</span></div>
+      </div>
+      <div class="ee">
+        <div class="ee-lbl">8 shifts per month</div>
+        <div class="er"><span>Total shift revenue</span><span>K6,400</span></div>
+        <div class="er"><span>Platform fees (20%)</span><span>K1,280</span></div>
+        <div class="er"><span>Monthly subscription</span><span>K150</span></div>
+        <div class="er total"><span>Monthly take-home</span><span>K4,970</span></div>
+      </div>
+      <div class="msums">
+        <div class="ms"><div class="ms-n">K4,970</div><div class="ms-l">Monthly (8 shifts)</div></div>
+        <div class="ms"><div class="ms-n">K9,780</div><div class="ms-l">Monthly (16 shifts)</div></div>
+      </div>
+      <div class="ep-note">Doctor home visits earn K960–K2,000 per consultation after platform fee. Rates vary by discipline and professional.</div>
+    </div>
+  </div>
+</section>
+
+<!-- REAL NURSES PHOTOS -->
+<div class="nurses">
+  <div class="nurses-inner">
+    <div class="np"><img src="images/nurse-1.jpeg" alt="MedHome nurse"><div class="np-ov"></div><div class="np-text"><div class="np-name">Verified Professional</div><div class="np-role">NMCZ Licensed · Lusaka</div></div></div>
+    <div class="np"><img src="images/nurse-2.jpeg" alt="MedHome nurse"><div class="np-ov"></div><div class="np-text"><div class="np-name">Ready to Work</div><div class="np-role">Shift-Based · On Your Terms</div></div></div>
+    <div class="np"><img src="images/nurses-together-3.jpeg" alt="MedHome nurses"><div class="np-ov"></div><div class="np-text"><div class="np-name">Join the Network</div><div class="np-role">MedHome Professionals · Lusaka</div></div></div>
+    <div class="np"><img src="images/nurses-together-1.jpeg" alt="MedHome nurses"><div class="np-ov"></div><div class="np-text"><div class="np-name">Your Skills. Your Schedule.</div><div class="np-role">Earn More. Work Flexibly.</div></div></div>
+  </div>
+</div>
+
+<!-- HOW TO JOIN -->
+<section class="join" id="join">
+  <div class="ey">How to join</div>
+  <h2 class="t">Start earning in <em>four steps.</em></h2>
+  <div class="jgrid">
+    <div class="jsteps">
+      <div class="js"><div class="jsn">01</div><div><h3>Submit your application</h3><p>Fill in your name, discipline, and contact details. Upload your NMCZ or HPCZ certificate and your NRC or passport.</p></div></div>
+      <div class="js"><div class="jsn">02</div><div><h3>We verify your license</h3><p>MedHome checks your license directly against the NMCZ or HPCZ database. Usually 24 to 48 hours. Once verified, your profile goes live with a badge.</p></div></div>
+      <div class="js"><div class="jsn">03</div><div><h3>Set up your profile</h3><p>Add your photo, set your hourly rate, choose the areas of Lusaka you cover, and mark your availability. You are now visible to families searching for care.</p></div></div>
+      <div class="js"><div class="jsn">04</div><div><h3>Accept and get paid</h3><p>When a family books you, accept the shift, deliver the care, and your payment arrives in your mobile money account automatically when the shift is done.</p></div></div>
+    </div>
+    <div>
+      <div class="req-panel">
+        <div class="rp-t">What you need to apply</div>
+        <div class="rlist">
+          <div class="ri"><div class="ri-ch">✓</div><div><h4>Valid NMCZ or HPCZ license</h4><p>Current and in good standing with the council.</p></div></div>
+          <div class="ri"><div class="ri-ch">✓</div><div><h4>National Registration Card or passport</h4><p>For identity verification.</p></div></div>
+          <div class="ri"><div class="ri-ch">✓</div><div><h4>Proof of qualifications</h4><p>Diploma, degree, or certificate in your discipline.</p></div></div>
+          <div class="ri"><div class="ri-ch">✓</div><div><h4>Professional photo</h4><p>A clear headshot for your profile.</p></div></div>
+          <div class="ri"><div class="ri-ch">✓</div><div><h4>MTN or Airtel mobile money account</h4><p>For receiving shift payments directly.</p></div></div>
+        </div>
+        <div class="founding">
+          <div class="fn-tag">Founding Professional Offer</div>
+          <div class="fn-text">The first 30 verified professionals to join MedHome pay zero subscription fee for 6 months. Apply now to claim your founding professional status.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+  <div class="ey">From professionals</div>
+  <h2 class="t">What professionals <em>say.</em></h2>
+  <div class="tg">
+    <div class="tc"><div class="tqm">"</div><p class="tt">I work at UTH during the week and take MedHome shifts on weekends. In one month I earned an extra K3,200 doing what I already do — just in someone's home instead of a ward.</p><div class="ta"><div class="tav">RN</div><div><div class="tn">Robert N.</div><div class="tro">Registered Nurse · UTH Lusaka</div></div></div></div>
+    <div class="tc"><div class="tqm">"</div><p class="tt">The verified badge means families trust me before they even meet me. My NMCZ number on the profile does all the work. I just show up and do what I love.</p><div class="ta"><div class="tav">GN</div><div><div class="tn">Grace N.</div><div class="tro">Registered Nurse · Lusaka</div></div></div></div>
+    <div class="tc"><div class="tqm">"</div><p class="tt">As a physiotherapist, most of my clients need home sessions after discharge anyway. MedHome gave me a proper platform to find them, manage bookings, and get paid without hassle.</p><div class="ta"><div class="tav">TM</div><div><div class="tn">Tendai M.</div><div class="tro">Physiotherapist · Lusaka</div></div></div></div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="ey">Professional pricing</div>
+  <h2 class="t">Simple, honest <em>fees.</em></h2>
+  <p class="b">MedHome takes 20% of each booking. Founding professionals pay zero subscription for 6 months.</p>
+  <div class="pgrid">
+    <div class="pc"><span class="ptg">Per Booking</span><div class="pam">20<span style="font-size:22px;opacity:0.5">%</span></div><div class="ppd">platform commission per completed shift</div><ul class="pfl"><li>Deducted automatically from shift fee</li><li>No payment chasing — we handle it</li><li>Funds to mobile money on completion</li><li>Transparent earnings dashboard</li></ul><a href="#apply" class="pct">Apply to join</a></div>
+    <div class="pc pf"><span class="ptg">Professional Subscription</span><div class="pam">K150</div><div class="ppd">per month after 6-month free period</div><ul class="pfl"><li>Verified badge on your profile</li><li>Appear in all family searches</li><li>Scheduling and availability tools</li><li>Booking management dashboard</li><li>Earnings tracker and history</li></ul><a href="#apply" class="pct">Start free — apply now</a></div>
+    <div class="pc"><span class="ptg">Founding Professional</span><div class="pam">K0</div><div class="ppd">subscription for first 6 months</div><ul class="pfl"><li>Everything in the paid plan</li><li>First 30 verified professionals only</li><li>Founding badge on your profile</li><li>Priority placement in searches</li><li>Direct access to the founding team</li></ul><a href="#apply" class="pct">Claim your spot</a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="apply">
+  <h2>Your skills deserve<br>to be <em>found.</em></h2>
+  <p>Join MedHome and start connecting with Lusaka families who need exactly what you offer — verified, trusted, on your terms.</p>
+  <div class="cta-bs">
+    <a href="#" class="btn-dark">Apply to Join MedHome</a>
+    <a href="index.html" class="btn-outline-dark">See the family side</a>
+  </div>
+</section>
+
+<footer>
+  <div class="ft">
+    <div class="fb">
+      <div class="fbl">
+        <svg width="24" height="24" viewBox="0 0 34 34" fill="none"><path d="M9.5 3C6.46 3 4 5.46 4 8.5S6.46 14 9.5 14 15 11.54 15 8.5 12.54 3 9.5 3Z" fill="#C9943A"/><path d="M24.5 3C21.46 3 19 5.46 19 8.5S21.46 14 24.5 14 30 11.54 30 8.5 27.54 3 24.5 3Z" fill="white" opacity="0.5"/><path d="M9.5 18C6.46 18 4 20.46 4 23.5S6.46 29 9.5 29 15 26.54 15 23.5 12.54 18 9.5 18Z" fill="white" opacity="0.3"/><path d="M24.5 18C21.46 18 19 20.46 19 23.5S21.46 29 24.5 29 30 26.54 30 23.5 27.54 18 24.5 18Z" fill="#C9943A" opacity="0.5"/></svg>
+        <span class="fbn">Med<span>Home</span></span>
+      </div>
+      <p>Helping Zambia's healthcare professionals earn more by connecting with families who need their expertise — at home, by the shift.</p>
+    </div>
+    <div class="fc"><h4>Professionals</h4><a href="#who">Who can join</a><a href="#join">How to join</a><a href="#pricing">Pricing</a><a href="#apply">Apply now</a></div>
+    <div class="fc"><h4>Families</h4><a href="index.html">Book care</a><a href="index.html#discs">Browse disciplines</a><a href="index.html#pricing">Family pricing</a></div>
+    <div class="fc"><h4>Company</h4><a href="#">About</a><a href="#">Contact</a><a href="#">Terms &amp; Conditions</a><a href="#">Privacy Policy</a></div>
+  </div>
+  <div class="fb2"><span>© MedHome 2025. Lusaka, Zambia. All rights reserved.</span><span>NMCZ &amp; HPCZ Verified Platform</span></div>
+</footer>
+</body>
+</html>
