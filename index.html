@@ -285,7 +285,29 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
 
 @media(max-width:1200px){.nurses-grid{grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto}.nurses-cta{grid-column:1/-1;padding:48px}}
 @media(max-width:1024px){nav{padding:0 32px}section{padding:80px 40px}.hero{grid-template-columns:1fr}.hero-left{padding:60px 40px}.hero-right{height:400px}.how-grid,.why-grid,.paygrid{grid-template-columns:1fr;gap:48px}.dgrid,.tg,.pgrid{grid-template-columns:1fr 1fr}.rgrid{grid-template-columns:1fr 1fr}.coming-grid{grid-template-columns:1fr 1fr}.ft{grid-template-columns:1fr 1fr}.nurses-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:640px){nav{padding:0 20px}.nav-links{gap:14px}.hero-left{padding:40px 24px}section{padding:64px 24px}.dgrid,.tg,.pgrid,.rgrid,.coming-grid{grid-template-columns:1fr}.ft{grid-template-columns:1fr;gap:32px}.cta{padding:80px 24px}footer{padding:48px 24px 32px}.nurses-grid{grid-template-columns:1fr}}
+.nav-ham{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer;padding:4px 8px;line-height:1;flex-shrink:0}
+.dic-img{width:64px;height:64px;border-radius:50%;overflow:hidden;margin-bottom:20px;border:2px solid rgba(201,148,58,0.5)}
+.dic-img img{width:100%;height:100%;object-fit:cover;object-position:top center}
+@media(max-width:640px){
+  nav{padding:0 20px;position:relative}
+  .nav-ham{display:block}
+  .nav-links{display:none;position:absolute;top:74px;left:0;right:0;background:rgba(10,38,38,0.98);flex-direction:column;padding:8px 0;gap:0;border-bottom:1px solid rgba(255,255,255,0.1);z-index:200}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:14px 24px;border-bottom:1px solid rgba(255,255,255,0.07);font-size:13px;letter-spacing:0.05em;width:100%}
+  .nav-cta{margin:12px 24px 16px;text-align:center;border-radius:50px!important;padding:12px 24px!important;width:calc(100% - 48px)}
+  .hero-left{padding:40px 24px}
+  .hero-right{height:260px}
+  .hero-trust-card{bottom:10px;left:10px;right:10px;padding:12px 16px;border-radius:10px}
+  .htc-text{display:none}
+  section{padding:56px 20px}
+  .dgrid,.tg,.pgrid,.rgrid,.coming-grid{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr;gap:32px}
+  .cta{padding:72px 20px}
+  footer{padding:48px 20px 32px}
+  .nurses-grid{grid-template-columns:1fr}
+  .ranges{display:none}
+  .payment{display:none}
+}
 </style>
 </head>
 <body>
@@ -302,7 +324,8 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
     </div>
     <span class="logo-name">Med<span>Home</span></span>
   </a>
-  <div class="nav-links">
+  <button class="nav-ham" id="navHam">☰</button>
+  <div class="nav-links" id="navLinks">
     <a href="#how">How it works</a>
     <a href="#discs">Professionals</a>
     <a href="#pricing">Pricing</a>
@@ -406,7 +429,7 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
   <div class="dgrid">
     <div class="dc"><div class="dic">🩺</div><h3>Registered Nurses</h3><p>Post-surgery care, medication administration, wound dressing, chronic disease management, and palliative care at home.</p><div class="dau">Verified by NMCZ</div></div>
     <div class="dc"><div class="dic">👶</div><h3>Midwives</h3><p>Postnatal home visits, newborn checks, breastfeeding support, and maternal recovery care for new mothers.</p><div class="dau">Verified by NMCZ</div></div>
-    <div class="dc prem"><div class="ptag">Premium</div><div class="dic">👨‍⚕️</div><h3>Doctors &amp; GPs</h3><p>Home consultations, post-discharge check-ups, chronic disease monitoring, prescriptions, and specialist referrals at your door.</p><div class="dau gold">Verified by HPCZ</div><div class="dprice">Home visit from K1,200</div></div>
+    <div class="dc prem"><div class="ptag">Premium</div><div class="dic-img"><img src="images/doctor.jpeg" alt="Doctor"></div><h3>Doctors &amp; GPs</h3><p>Home consultations, post-discharge check-ups, chronic disease monitoring, prescriptions, and specialist referrals at your door.</p><div class="dau gold">Verified by HPCZ</div><div class="dprice">Home visit from K1,200</div></div>
     <div class="dc"><div class="dic">🦽</div><h3>Physiotherapists</h3><p>Stroke rehabilitation, mobility recovery, post-orthopaedic care, and personalised exercise therapy at home.</p><div class="dau">Verified by HPCZ</div></div>
     <div class="dc"><div class="dic">🧠</div><h3>Mental Health Counsellors</h3><p>Home-based counselling for depression, anxiety, grief, and caregiver stress — for patients and families alike.</p><div class="dau">Verified by HPCZ</div></div>
     <div class="dc"><div class="dic">🤲</div><h3>Certified Caregivers</h3><p>Daily living assistance, elderly care, companionship, and long-term support for patients recovering at home.</p><div class="dau">MedHome Certified</div></div>
@@ -552,5 +575,10 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
   </div>
   <div class="fb2"><span>© MedHome 2025. Lusaka, Zambia. All rights reserved.</span><span>NMCZ &amp; HPCZ Verified Platform</span></div>
 </footer>
+<script>
+var ham=document.getElementById('navHam'),links=document.getElementById('navLinks');
+ham.addEventListener('click',function(){links.classList.toggle('open');ham.textContent=links.classList.contains('open')?'✕':'☰';});
+links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');ham.textContent='☰';});});
+</script>
 </body>
 </html>

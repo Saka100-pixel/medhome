@@ -214,7 +214,26 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
 .hbadge{animation-delay:0.1s}h1{animation-delay:0.22s}.hsub{animation-delay:0.35s}.hbtns{animation-delay:0.46s}.earn-strip{animation-delay:0.56s}
 
 @media(max-width:1024px){nav{padding:0 32px}section{padding:80px 40px}.hero{grid-template-columns:1fr}.hero-left{padding:60px 40px}.hero-right{height:420px}.bgrid,.jgrid{grid-template-columns:1fr;gap:48px}.who-grid,.tg,.pgrid{grid-template-columns:1fr 1fr}.ft{grid-template-columns:1fr 1fr}.nurses-inner{grid-template-columns:1fr 1fr}.dstrip{padding:16px 32px}}
-@media(max-width:640px){nav{padding:0 20px}.nl2{gap:14px}.hero-left{padding:40px 24px}section{padding:64px 24px}.who-grid,.tg,.pgrid{grid-template-columns:1fr}.ft{grid-template-columns:1fr;gap:32px}.cta{padding:72px 24px}footer{padding:48px 24px 32px}.nurses-inner{grid-template-columns:1fr 1fr}}
+.nav-ham-p{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer;padding:4px 8px;line-height:1;flex-shrink:0}
+@media(max-width:640px){
+  nav{padding:0 20px;position:relative}
+  .nav-ham-p{display:block}
+  .nl2{display:none;position:absolute;top:74px;left:0;right:0;background:rgba(10,38,38,0.98);flex-direction:column;padding:8px 0;gap:0;border-bottom:1px solid rgba(255,255,255,0.1);z-index:200}
+  .nl2.open{display:flex}
+  .nl2 a{padding:14px 24px;border-bottom:1px solid rgba(255,255,255,0.07);font-size:13px;letter-spacing:0.05em;width:100%}
+  .ncta{margin:12px 24px 16px;text-align:center;border-radius:50px!important;padding:12px 24px!important;width:calc(100% - 48px)}
+  .hero-left{padding:40px 24px}
+  .hero-right{height:280px}
+  .join-card{background:rgba(10,35,35,0.93);border-color:rgba(255,255,255,0.2);bottom:10px;left:10px;right:10px}
+  .jc-title{color:rgba(255,255,255,0.8)}
+  .jcs-text{color:rgba(255,255,255,0.85)}
+  section{padding:56px 20px}
+  .who-grid,.tg,.pgrid{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr;gap:32px}
+  .cta{padding:72px 20px}
+  footer{padding:48px 20px 32px}
+  .nurses-inner{grid-template-columns:1fr 1fr}
+}
 </style>
 </head>
 <body>
@@ -229,7 +248,8 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
     </svg>
     <span class="nn">Med<span>Home</span></span>
   </a>
-  <div class="nl2">
+  <button class="nav-ham-p" id="navHamP">☰</button>
+  <div class="nl2" id="navLinksP">
     <a href="index.html" class="nfam">For Families</a>
     <a href="#who">Disciplines</a>
     <a href="#join">How to join</a>
@@ -425,5 +445,10 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
   </div>
   <div class="fb2"><span>© MedHome 2025. Lusaka, Zambia. All rights reserved.</span><span>NMCZ &amp; HPCZ Verified Platform</span></div>
 </footer>
+<script>
+var ham=document.getElementById('navHamP'),links=document.getElementById('navLinksP');
+ham.addEventListener('click',function(){links.classList.toggle('open');ham.textContent=links.classList.contains('open')?'✕':'☰';});
+links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');ham.textContent='☰';});});
+</script>
 </body>
 </html>
