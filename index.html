@@ -87,9 +87,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .htc-text{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.6}
 
 /* DISC STRIP */
-.dstrip{background:var(--teal-mid);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);padding:16px 80px;display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap}
-.di{font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.55)}
-.dd{color:var(--gold);opacity:0.4;font-size:16px}
+.dstrip{background:var(--teal-mid);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);padding:20px 80px;display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+.di{font-family:'Playfair Display',serif;font-size:13px;font-style:italic;font-weight:500;letter-spacing:0.02em;color:rgba(255,255,255,0.75)}
+.dd{color:var(--gold);font-size:14px;opacity:0.6}
 
 /* SECTIONS */
 section{padding:100px 80px}
@@ -131,17 +131,12 @@ h2.t em{font-style:italic;color:var(--teal-light)}
 /* DISCIPLINES */
 .discs{background:var(--cream)}
 .dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:64px}
-.dc{background:var(--warm-white);padding:36px 30px;border-radius:14px;transition:transform 0.25s,box-shadow 0.25s;border:1px solid var(--border)}
-.dc:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(26,92,92,0.12)}
-.dc.prem{background:var(--teal-dark);border-color:var(--teal-dark)}
-.dc.prem:hover{box-shadow:0 20px 48px rgba(15,56,56,0.3)}
-.dic{width:52px;height:52px;border-radius:14px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:22px;transition:background 0.2s}
-.dc.prem .dic{background:rgba(255,255,255,0.08)}
-.dc h3{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;margin-bottom:8px;color:var(--text)}
-.dc.prem h3{color:#fff}
-.dc p{font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.8;margin-bottom:14px}
-.dc.prem p{color:rgba(255,255,255,0.6)}
-.dau{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal-light)}
+.dc{background:var(--teal-dark);padding:36px 30px;border-radius:14px;transition:transform 0.25s,box-shadow 0.25s;border:1px solid rgba(255,255,255,0.07)}
+.dc:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(15,56,56,0.3)}
+.dic{width:52px;height:52px;border-radius:14px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:22px;transition:background 0.2s}
+.dc h3{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;margin-bottom:8px;color:#fff}
+.dc p{font-size:13px;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:14px}
+.dau{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45)}
 .dau.gold{color:var(--gold)}
 .dprice{font-size:11px;color:rgba(255,255,255,0.4);margin-top:5px}
 .ptag{display:inline-block;background:var(--gold);color:var(--teal-dark);font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:50px;margin-bottom:14px}
@@ -339,7 +334,7 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
     <div class="hero-left-bg"></div>
     <div class="hero-left-overlay"></div>
     <div class="hero-left-content">
-      <div class="launch-pill"><div class="launch-dot"></div><span>Launching in Lusaka · 2025</span></div>
+      <div class="launch-pill"><div class="launch-dot"></div><span>Launching in Lusaka · 2026</span></div>
       <h1>When your family<br>needs care,<br><em>trust matters most.</em></h1>
       <p class="hero-sub">Book NMCZ and HPCZ-verified nurses, doctors, physiotherapists, midwives, and caregivers for your recovering loved one — by the shift, at home in Lusaka.</p>
       <div class="search-wrap">
@@ -375,10 +370,10 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
 
 <!-- DISCIPLINES STRIP -->
 <div class="dstrip">
+  <div class="di">Doctors</div><div class="dd">·</div>
   <div class="di">Registered Nurses</div><div class="dd">·</div>
-  <div class="di">Doctors &amp; GPs</div><div class="dd">·</div>
-  <div class="di">Physiotherapists</div><div class="dd">·</div>
   <div class="di">Midwives</div><div class="dd">·</div>
+  <div class="di">Physiotherapists</div><div class="dd">·</div>
   <div class="di">Mental Health Counsellors</div><div class="dd">·</div>
   <div class="di">Certified Caregivers</div>
 </div>
@@ -428,7 +423,7 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
   <div class="dgrid">
     <div class="dc"><div class="dic">🩺</div><h3>Registered Nurses</h3><p>Post-surgery care, medication administration, wound dressing, chronic disease management, and palliative care at home.</p><div class="dau">Verified by NMCZ</div></div>
     <div class="dc"><div class="dic">👶</div><h3>Midwives</h3><p>Postnatal home visits, newborn checks, breastfeeding support, and maternal recovery care for new mothers.</p><div class="dau">Verified by NMCZ</div></div>
-    <div class="dc prem"><div class="ptag">Premium</div><div class="dic-img"><img src="images/doctor.jpeg" alt="Doctor"></div><h3>Doctors &amp; GPs</h3><p>Home consultations, post-discharge check-ups, chronic disease monitoring, prescriptions, and specialist referrals at your door.</p><div class="dau gold">Verified by HPCZ</div><div class="dprice">Home visit from K1,200</div></div>
+    <div class="dc prem"><div class="ptag">Premium</div><div class="dic-img"><img src="images/doctor.jpeg" alt="Doctor"></div><h3>Doctors</h3><p>Home consultations, post-discharge check-ups, chronic disease monitoring, prescriptions, and specialist referrals at your door.</p><div class="dau gold">Verified by HPCZ</div><div class="dprice">Home visit from K1,200</div></div>
     <div class="dc"><div class="dic">🦽</div><h3>Physiotherapists</h3><p>Stroke rehabilitation, mobility recovery, post-orthopaedic care, and personalised exercise therapy at home.</p><div class="dau">Verified by HPCZ</div></div>
     <div class="dc"><div class="dic">🧠</div><h3>Mental Health Counsellors</h3><p>Home-based counselling for depression, anxiety, grief, and caregiver stress — for patients and families alike.</p><div class="dau">Verified by HPCZ</div></div>
     <div class="dc"><div class="dic">🤲</div><h3>Certified Caregivers</h3><p>Daily living assistance, elderly care, companionship, and long-term support for patients recovering at home.</p><div class="dau">MedHome Certified</div></div>
@@ -468,7 +463,7 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
   <p class="b">All rates are set by the professionals themselves. These are typical ranges in Lusaka to help you plan.</p>
   <div class="rgrid">
     <div class="rc"><span class="ri">🩺</span><div class="rd">Registered Nurse</div><div class="rr">K600 – K900</div><div class="rs">per 12-hour shift</div></div>
-    <div class="rc rp"><span class="rtag">Premium</span><span class="ri">👨‍⚕️</span><div class="rd">Doctor / GP</div><div class="rr">K1,200 – K2,500</div><div class="rs">per home consultation</div></div>
+    <div class="rc rp"><span class="rtag">Premium</span><span class="ri">👨‍⚕️</span><div class="rd">Doctor</div><div class="rr">K1,200 – K2,500</div><div class="rs">per home consultation</div></div>
     <div class="rc"><span class="ri">🦽</span><div class="rd">Physiotherapist</div><div class="rr">K500 – K800</div><div class="rs">per session</div></div>
     <div class="rc"><span class="ri">🤲</span><div class="rd">Caregiver</div><div class="rr">K300 – K500</div><div class="rs">per 8-hour shift</div></div>
   </div>
@@ -486,7 +481,7 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
         <div class="wp"><div class="wn">01</div><div><h4>Verification at the source</h4><p>We check directly with NMCZ and HPCZ — not just against self-reported certificates.</p></div></div>
         <div class="wp"><div class="wn">02</div><div><h4>Shift-based, not subscription-based</h4><p>Pay for one shift during surgery recovery. Not a monthly fee you keep paying forever.</p></div></div>
         <div class="wp"><div class="wn">03</div><div><h4>Payment held until care is delivered</h4><p>Funds release to the professional only after your shift is completed, protecting both sides.</p></div></div>
-        <div class="wp"><div class="wn">04</div><div><h4>Doctors who come to you</h4><p>Book a HPCZ-verified GP for a home consultation — follow-up care without leaving the house.</p></div></div>
+        <div class="wp"><div class="wn">04</div><div><h4>Doctors who come to you</h4><p>Book a HPCZ-verified doctor for a home consultation — follow-up care without leaving the house.</p></div></div>
       </div>
     </div>
     <div class="wimg">
@@ -498,15 +493,6 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="testi">
-  <div class="ey">Real families</div>
-  <h2 class="t">Trusted care, <em>real stories.</em></h2>
-  <div class="tg">
-    <div class="tc"><div class="tqm">"</div><p class="tt">After my father's stroke we needed a physiotherapist at home every morning. MedHome matched us the same day — HPCZ-verified and incredibly professional throughout.</p><div class="ta"><div class="tav">CM</div><div><div class="tn">Chanda M.</div><div class="tro">Daughter · Lusaka, Kabulonga</div></div></div></div>
-    <div class="tc"><div class="tqm">"</div><p class="tt">Seeing the NMCZ license number and reading real reviews from other families made all the difference. I finally felt safe having someone come home after my surgery.</p><div class="ta"><div class="tav">MB</div><div><div class="tn">Mutale B.</div><div class="tro">Patient · Lusaka, Woodlands</div></div></div></div>
-    <div class="tc"><div class="tqm">"</div><p class="tt">We booked a doctor for a home visit the morning my husband was discharged from UTH. He reviewed everything and adjusted the medication on the spot. Lifesaving convenience.</p><div class="ta"><div class="tav">PN</div><div><div class="tn">Patricia N.</div><div class="tro">Wife · Lusaka, Ibex Hill</div></div></div></div>
-  </div>
-</section>
 
 <!-- COMING SOON -->
 <section class="coming">

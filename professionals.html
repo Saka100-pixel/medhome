@@ -188,6 +188,29 @@ h2.t em{font-style:italic;color:var(--teal-light)}
 .pc.pf .pct{background:var(--gold);color:var(--teal-dark);border-color:var(--gold)}
 .pc.pf .pct:hover{opacity:0.9}
 
+/* PROTECTION */
+.protection{background:var(--teal-dark)}
+.protection h2.t{color:#fff}
+.prot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:0}
+.prot-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:30px 26px;transition:background 0.2s}
+.prot-card:hover{background:rgba(255,255,255,0.08)}
+.prot-ic{font-size:28px;margin-bottom:16px}
+.prot-card h4{font-size:15px;font-weight:600;color:#fff;margin-bottom:8px}
+.prot-card p{font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.75}
+
+/* FAQ */
+.faq{background:var(--warm-white)}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px}
+.faq-card{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:30px 28px}
+.faq-dark{background:var(--teal-dark);border-color:var(--teal-dark)}
+.faq-dark h4{color:#fff}
+.faq-dark p{color:rgba(255,255,255,0.6)}
+.faq-card h4{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;margin-bottom:10px;color:var(--text)}
+.faq-card p{font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.8}
+
+/* PRICING CALLOUT */
+.pricing-callout{background:var(--teal-pale);border:1px solid var(--teal-light);color:var(--teal);border-radius:12px;padding:18px 24px;font-size:13px;font-weight:500;line-height:1.7;margin-bottom:40px;max-width:680px}
+
 /* CTA */
 .cta{background:linear-gradient(135deg,var(--gold) 0%,#A87030 100%);padding:100px 80px;text-align:center;position:relative;overflow:hidden}
 .cta h2{font-family:'Playfair Display',serif;font-size:clamp(36px,4.5vw,62px);font-weight:700;line-height:1.1;letter-spacing:-0.02em;color:var(--teal-dark);margin-bottom:18px}
@@ -211,11 +234,23 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
 .fb2{display:flex;justify-content:space-between;align-items:center;font-size:12px}
 .fb2 span{opacity:0.3}
 
+/* WHY NOW */
+.why-now{background:var(--cream)}
+.wn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}
+.wnc{background:var(--warm-white);padding:40px 32px;border-radius:14px;border:1px solid var(--border);transition:transform 0.2s,box-shadow 0.2s}
+.wnc:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(26,92,92,0.1)}
+.wnc-dark{background:var(--teal-dark);border-color:var(--teal-dark)}
+.wnc-dark h3{color:#fff}
+.wnc-dark p{color:rgba(255,255,255,0.6)}
+.wnc-ic{font-size:32px;margin-bottom:20px}
+.wnc h3{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;margin-bottom:10px;color:var(--text)}
+.wnc p{font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.85}
+
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 .hc>*{animation:fadeUp 0.8s ease both}
 .hbadge{animation-delay:0.1s}h1{animation-delay:0.22s}.hsub{animation-delay:0.35s}.hbtns{animation-delay:0.46s}.earn-strip{animation-delay:0.56s}
 
-@media(max-width:1024px){nav{padding:0 32px}section{padding:80px 40px}.hero{grid-template-columns:1fr}.hero-left{padding:60px 40px}.hero-right{height:420px}.bgrid,.jgrid{grid-template-columns:1fr;gap:48px}.who-grid,.tg,.pgrid{grid-template-columns:1fr 1fr}.ft{grid-template-columns:1fr 1fr}.nurses-inner{grid-template-columns:1fr 1fr}.dstrip{padding:16px 32px}}
+@media(max-width:1024px){nav{padding:0 32px}section{padding:80px 40px}.hero{grid-template-columns:1fr}.hero-left{padding:60px 40px}.hero-right{height:420px}.bgrid,.jgrid{grid-template-columns:1fr;gap:48px}.who-grid,.tg,.pgrid{grid-template-columns:1fr 1fr}.ft{grid-template-columns:1fr 1fr}.nurses-inner{grid-template-columns:1fr 1fr}.dstrip{padding:16px 32px}.wn-grid{grid-template-columns:1fr 1fr}.prot-grid{grid-template-columns:1fr 1fr}}
 .nav-ham-p{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer;padding:4px 8px;line-height:1;flex-shrink:0}
 @media(max-width:640px){
   nav{padding:0 20px;position:relative}
@@ -225,16 +260,21 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
   .nl2 a{padding:14px 24px;border-bottom:1px solid rgba(255,255,255,0.07);font-size:13px;letter-spacing:0.05em;width:100%}
   .ncta{margin:12px 24px 16px;text-align:center;border-radius:50px!important;padding:12px 24px!important;width:calc(100% - 48px)}
   .hero-left{padding:40px 24px}
-  .hero-right{height:280px}
-  .join-card{background:rgba(10,35,35,0.93);border-color:rgba(255,255,255,0.2);bottom:10px;left:10px;right:10px}
-  .jc-title{color:rgba(255,255,255,0.8)}
-  .jcs-text{color:rgba(255,255,255,0.85)}
+  .hero-right{height:520px}
+  .join-card{background:rgba(10,35,35,0.95);border-color:rgba(255,255,255,0.2);bottom:12px;left:12px;right:12px;padding:18px 16px}
+  .jc-title{color:rgba(255,255,255,0.8);margin-bottom:12px}
+  .jc-steps{gap:8px;margin-bottom:14px}
+  .jcs-text{color:rgba(255,255,255,0.88);font-size:11px}
+  .jcs-text strong{font-size:11px}
   section{padding:56px 20px}
   .who-grid,.tg,.pgrid{grid-template-columns:1fr}
   .ft{grid-template-columns:1fr;gap:32px}
   .cta{padding:72px 20px}
   footer{padding:48px 20px 32px}
   .nurses-inner{grid-template-columns:1fr 1fr}
+  .wn-grid{grid-template-columns:1fr}
+  .prot-grid{grid-template-columns:1fr}
+  .faq-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -268,7 +308,7 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
     <div class="hc">
       <div class="hbadge"><div class="hbdot"></div><span>For Healthcare Professionals · Lusaka</span></div>
       <h1>Your license<br>is your <em>greatest</em><br>asset. Use it.</h1>
-      <p class="hsub">Join MedHome and connect with Lusaka families who need your expertise — on your schedule, at your rate, verified by NMCZ or HPCZ.</p>
+      <p class="hsub">Turn your healthcare license into flexible extra income in Lusaka — on your schedule, at your rate, verified by NMCZ or HPCZ.</p>
       <div class="hbtns">
         <a href="#apply" class="btn-gold-pill">Apply to Join MedHome</a>
         <a href="#join" class="btn-ghost-pill">See how it works</a>
@@ -304,6 +344,18 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
   <div class="di">Mental Health Counsellors</div><div class="dd">·</div>
   <div class="di">Certified Caregivers</div>
 </div>
+
+<!-- WHY NOW -->
+<section class="why-now" id="why-now">
+  <div class="ey">Why now</div>
+  <h2 class="t">Lusaka's healthcare gap is real and growing.</h2>
+  <p class="b">The conditions that make MedHome necessary are already here. This is not a future opportunity — it is a current one.</p>
+  <div class="wn-grid">
+    <div class="wnc"><div class="wnc-ic">🏥</div><h3>Hospitals are overstretched</h3><p>UTH and Lusaka's public hospitals are operating beyond capacity. Patients are discharged early with nowhere to continue care at home.</p></div>
+    <div class="wnc"><div class="wnc-ic">👨‍👩‍👧</div><h3>Families need home-based care</h3><p>More Lusaka families are caring for elderly parents, recovering patients, and new mothers at home — with no trusted way to find skilled help.</p></div>
+    <div class="wnc wnc-dark"><div class="wnc-ic">💼</div><h3>Professionals need flexible income</h3><p>Over 18,000 nurses are registered in Zambia. Many are underemployed or seek income outside hospital hours. MedHome gives them the platform to do it safely.</p></div>
+  </div>
+</section>
 
 <!-- WHO CAN JOIN -->
 <section class="who" id="who">
@@ -399,26 +451,45 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testi">
-  <div class="ey">From professionals</div>
-  <h2 class="t">What professionals <em>say.</em></h2>
-  <div class="tg">
-    <div class="tc"><div class="tqm">"</div><p class="tt">I work at UTH during the week and take MedHome shifts on weekends. In one month I earned an extra K3,200 doing what I already do — just in someone's home instead of a ward.</p><div class="ta"><div class="tav">RN</div><div><div class="tn">Robert N.</div><div class="tro">Registered Nurse · UTH Lusaka</div></div></div></div>
-    <div class="tc"><div class="tqm">"</div><p class="tt">The verified badge means families trust me before they even meet me. My NMCZ number on the profile does all the work. I just show up and do what I love.</p><div class="ta"><div class="tav">GN</div><div><div class="tn">Grace N.</div><div class="tro">Registered Nurse · Lusaka</div></div></div></div>
-    <div class="tc"><div class="tqm">"</div><p class="tt">As a physiotherapist, most of my clients need home sessions after discharge anyway. MedHome gave me a proper platform to find them, manage bookings, and get paid without hassle.</p><div class="ta"><div class="tav">TM</div><div><div class="tn">Tendai M.</div><div class="tro">Physiotherapist · Lusaka</div></div></div></div>
-  </div>
-</section>
-
 <!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="ey">Professional pricing</div>
   <h2 class="t">Simple, honest <em>fees.</em></h2>
-  <p class="b">MedHome takes 20% of each booking. Founding professionals pay zero subscription for 6 months.</p>
+  <p class="b">MedHome takes 20% of each completed booking. The K150/month subscription only begins after your first 6 free months. You never pay both at the same time during the free period.</p>
+  <div class="pricing-callout">Simple summary: Professionals pay 20% per completed booking, plus K150/month only after the first 6 free months. Never both at a subscription rate during the founding period.</div>
   <div class="pgrid">
-    <div class="pc"><span class="ptg">Per Booking</span><div class="pam">20<span style="font-size:22px;opacity:0.5">%</span></div><div class="ppd">platform commission per completed shift</div><ul class="pfl"><li>Deducted automatically from shift fee</li><li>No payment chasing — we handle it</li><li>Funds to mobile money on completion</li><li>Transparent earnings dashboard</li></ul><a href="#apply" class="pct">Apply to join</a></div>
-    <div class="pc pf"><span class="ptg">Professional Subscription</span><div class="pam">K150</div><div class="ppd">per month after 6-month free period</div><ul class="pfl"><li>Verified badge on your profile</li><li>Appear in all family searches</li><li>Scheduling and availability tools</li><li>Booking management dashboard</li><li>Earnings tracker and history</li></ul><a href="#apply" class="pct">Start free — apply now</a></div>
+    <div class="pc"><span class="ptg">Per Booking</span><div class="pam">20<span style="font-size:22px;opacity:0.5">%</span></div><div class="ppd">platform commission per completed shift</div><ul class="pfl"><li>Deducted automatically from shift fee</li><li>No payment chasing — we handle it</li><li>Funds to mobile money on completion</li><li>Transparent earnings dashboard</li></ul><a href="#apply" class="pct">Get Verified and Start Earning</a></div>
+    <div class="pc pf"><span class="ptg">Professional Subscription</span><div class="pam">K150</div><div class="ppd">per month after 6-month free period</div><ul class="pfl"><li>Verified badge on your profile</li><li>Appear in all family searches</li><li>Scheduling and availability tools</li><li>Booking management dashboard</li><li>Earnings tracker and history</li></ul><a href="#apply" class="pct">Get Verified and Start Earning</a></div>
     <div class="pc"><span class="ptg">Founding Professional</span><div class="pam">K0</div><div class="ppd">subscription for first 6 months</div><ul class="pfl"><li>Everything in the paid plan</li><li>First 30 verified professionals only</li><li>Founding badge on your profile</li><li>Priority placement in searches</li><li>Direct access to the founding team</li></ul><a href="#apply" class="pct">Claim your spot</a></div>
+  </div>
+</section>
+
+<!-- PROFESSIONAL PROTECTION -->
+<section class="protection">
+  <div class="ey">Your protection</div>
+  <h2 class="t" style="color:#fff">Protected on <em style="color:var(--gold)">every booking.</em></h2>
+  <p class="b" style="color:rgba(255,255,255,0.55);margin-bottom:56px">MedHome is a healthcare platform. We take professional safety and legal protection as seriously as family trust.</p>
+  <div class="prot-grid">
+    <div class="prot-card"><div class="prot-ic">🔒</div><h4>Verified families only</h4><p>Every family is registered with a verified phone number and address before they can book a professional.</p></div>
+    <div class="prot-card"><div class="prot-ic">📋</div><h4>Digital booking records</h4><p>Every shift is recorded on the platform — patient details, shift times, and care notes. Your work is documented.</p></div>
+    <div class="prot-card"><div class="prot-ic">💬</div><h4>Dispute support line</h4><p>If a dispute arises, MedHome's support team reviews the booking record and mediates fairly between both sides.</p></div>
+    <div class="prot-card"><div class="prot-ic">❌</div><h4>Clear cancellation policy</h4><p>Families who cancel with less than 4 hours notice pay a cancellation fee. Your time is protected.</p></div>
+    <div class="prot-card"><div class="prot-ic">🚨</div><h4>Emergency escalation</h4><p>If a patient deteriorates beyond home care, the platform has a clear escalation protocol. You will never be left without a path forward.</p></div>
+    <div class="prot-card"><div class="prot-ic">📜</div><h4>Professional code of conduct</h4><p>All professionals agree to MedHome's code of conduct on joining. Your standards are protected by the platform's standards.</p></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="ey">Common questions</div>
+  <h2 class="t">Everything you need to know.</h2>
+  <div class="faq-grid">
+    <div class="faq-card"><h4>How long does verification take?</h4><p>Usually 24 to 48 hours. We check directly with NMCZ or HPCZ. Once verified your profile goes live with a verification badge immediately.</p></div>
+    <div class="faq-card"><h4>Do I need my own transport?</h4><p>Yes. You are responsible for getting to and from the patient's home. You can factor travel costs into your rate when setting your price.</p></div>
+    <div class="faq-card"><h4>When do I get paid?</h4><p>Payment is released to your MTN or Airtel mobile money account automatically 2 hours after the shift is completed, unless a dispute is raised.</p></div>
+    <div class="faq-card"><h4>Can I choose my own working hours?</h4><p>Completely. You set your availability day by day. You accept only the bookings that suit you. There is no minimum number of shifts required.</p></div>
+    <div class="faq-card"><h4>What happens if a family cancels?</h4><p>If a family cancels with less than 4 hours notice, they pay a cancellation fee which is passed to you. Last-minute cancellations will not cost you your time.</p></div>
+    <div class="faq-card faq-dark"><h4>Can I work on MedHome alongside my hospital job?</h4><p>Yes. MedHome is designed for exactly this. Many professionals take shifts on weekends, evenings, or days off. You are fully in control of when you work.</p></div>
   </div>
 </section>
 
