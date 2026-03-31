@@ -259,6 +259,12 @@ h2.t em{font-style:italic;color:var(--teal-light)}
 .btn-white-pill:hover{opacity:0.95;transform:translateY(-1px)}
 .btn-outline-white{border:2px solid rgba(255,255,255,0.35);color:#fff;padding:17px 44px;border-radius:50px;font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:background 0.2s;display:inline-block}
 .btn-outline-white:hover{background:rgba(255,255,255,0.1)}
+.cta-contact{margin-top:48px;text-align:center}
+.cta-contact-q{font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:16px;letter-spacing:0.02em}
+.cta-contact-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+.cta-contact-btn{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);color:#fff;padding:13px 24px;border-radius:50px;font-size:13px;font-weight:500;text-decoration:none;transition:background 0.2s;white-space:nowrap}
+.cta-contact-btn:hover{background:rgba(255,255,255,0.2)}
+.cta-contact-note{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.03em}
 
 /* FOOTER */
 footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80px 40px}
@@ -344,7 +350,7 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
         <div class="sf"><span class="si">📍</span>
           <select><option value="" disabled selected>Area in Lusaka</option><option>Kabulonga</option><option>Woodlands</option><option>Ibex Hill</option><option>Chelstone</option><option>Chilenje</option><option>Northmead</option><option>Roma</option><option>Rhodespark</option><option>Other area</option></select>
         </div>
-        <button class="search-btn">Search →</button>
+        <button class="search-btn" onclick="alert('Search is coming soon. In the meantime, contact us on WhatsApp at +260 767 770 750 to book your first shift.')">Search →</button>
       </div>
       <p class="price-hint">Nurse from <strong>K600/shift</strong> · Doctor from <strong>K1,200/visit</strong> · 20% platform fee</p>
       <div class="hero-stats">
@@ -542,6 +548,14 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
       <a href="#" class="btn-white-pill">Find a Professional</a>
       <a href="professionals.html" class="btn-outline-white">Join as a Professional</a>
     </div>
+    <div class="cta-contact">
+      <p class="cta-contact-q">Have a question before you book?</p>
+      <div class="cta-contact-links">
+        <a href="https://wa.me/260767770750" target="_blank" rel="noopener" class="cta-contact-btn">💬 Chat on WhatsApp</a>
+        <a href="mailto:chilambesaka@gmail.com" class="cta-contact-btn">✉️ chilambesaka@gmail.com</a>
+      </div>
+      <p class="cta-contact-note">We will update these to official MedHome contact details soon.</p>
+    </div>
   </div>
 </section>
 
@@ -558,7 +572,7 @@ footer{background:var(--teal-dark);color:rgba(255,255,255,0.55);padding:64px 80p
     <div class="fc"><h4>Professionals</h4><a href="professionals.html">Join MedHome</a><a href="#">Verification process</a><a href="#">Subscription</a><a href="#">Support</a></div>
     <div class="fc"><h4>Company</h4><a href="#">About</a><a href="#">Contact</a><a href="#">Terms &amp; Conditions</a><a href="#">Privacy Policy</a></div>
   </div>
-  <div class="fb2"><span>© MedHome 2025. Lusaka, Zambia. All rights reserved.</span><span>NMCZ &amp; HPCZ Verified Platform</span></div>
+  <div class="fb2"><span>© MedHome 2026. Lusaka, Zambia. All rights reserved.</span><span>NMCZ &amp; HPCZ Verified Platform</span></div>
 </footer>
 <script>
 var ham=document.getElementById('navHam'),links=document.getElementById('navLinks');
